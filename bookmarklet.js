@@ -27,6 +27,11 @@ $('.download-div a').live('click',function(){
 	$.ajax(urlActual,{cache:false, dataType:'json'}).success(function(data){
 		var optionActual = optionTemplate.replace('[url]',data.url).replace(['[song]'],tracks[x].artist + ' - ' + tracks[x].song);
 		$('.download-div select').append(optionActual);
+		
+		if(x == 0){
+			$('.download-div a').prop('href',jQuery('.download-div select').val());
+		}
+		
 		if((x + 1)< totalLength){
 			recursiveFunc(x + 1, totalLength);
 		}else{
