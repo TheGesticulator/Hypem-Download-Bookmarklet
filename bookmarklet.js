@@ -1,4 +1,4 @@
-(function($){
+javascript:(function($){
 var tracks = trackList[location.href];
 var div = "<div class='download-div' style='position:fixed; bottom: 0px;text-align:center; left:0px;background-color:#F1F2D8;border: 1px solid black; padding:10px; z-index:9999;'><div class='loading-div'>Loading...</div><div style='display:none' class='select-div'><select></select> <a href='#' target='_blank'>Download Link</a></div></div>";
 
@@ -41,4 +41,4 @@ $('.download-div a').live('click',function(){
 	});
 })(0,tracks.length)
 
-})(jQuery);
+})(jQuery)
